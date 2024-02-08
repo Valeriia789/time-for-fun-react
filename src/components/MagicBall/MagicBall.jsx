@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { BallBlack, BallWhite, BallTextContainer, EightContainer } from "./MagicBall.styled";
+import {
+  MainContainer,
+  StyledTitle,
+  BallContainer,
+  BallBlack,
+  BallWhite,
+  BallTextContainer,
+  EightContainer,
+  StyledButton,
+} from "./MagicBall.styled";
 
 const answers = [
   "Певно, що так",
@@ -7,7 +16,7 @@ const answers = [
   "Без сумніву",
   "Однозначно так",
   "Можете на це розраховувати",
-  "Нвстільки я бачу, так",
+  "Наскільки я бачу, так",
   "Ймовірно",
   "Перспективи хороші",
   "Так",
@@ -22,7 +31,7 @@ const answers = [
   "Краще не казати Вам зараз",
   "Зараз складно передбачити",
   "Зосередьтеся і запитайте ще раз",
-  "Йди в жопу"
+  "Йди в жопу",
 ];
 
 export const MagicBall = () => {
@@ -37,17 +46,21 @@ export const MagicBall = () => {
 
   return (
     <>
-      <div>
-        <p>Вітаю! Це магічна куля пророкувань і прийняття рішень</p>
-        <BallBlack>
-          <BallWhite>
-            <BallTextContainer>
+      <MainContainer>
+        <StyledTitle>
+          Вітаю! Це магічна куля пророкувань і прийняття рішень.
+        </StyledTitle>
+        <BallContainer>
+          <BallBlack>
+            <BallWhite>
+              <BallTextContainer>
                 {answer ? answer : <EightContainer>8</EightContainer>}
-            </BallTextContainer>
-          </BallWhite>
-        </BallBlack>
-        <button onClick={getAnswer}>Натисніть</button>
-      </div>
+              </BallTextContainer>
+            </BallWhite>
+          </BallBlack>
+        </BallContainer>
+        <StyledButton onClick={getAnswer}>Натисніть</StyledButton>
+      </MainContainer>
     </>
   );
 };
