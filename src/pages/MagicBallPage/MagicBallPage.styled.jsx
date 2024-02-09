@@ -8,7 +8,7 @@ export const PageContainer = styled.div`
 
   padding: 12px;
 
-  background-color: #aecedb;
+  background-color: #F8CF2C;
   /* align-items: center;
   justify-content: center; */
 `;

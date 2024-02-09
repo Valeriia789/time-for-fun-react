@@ -13,7 +13,7 @@ export const SharedLayout = () => {
               Головна
             </StyledNavLink>
             <StyledNavLink to="/ball">Магічна куля</StyledNavLink>
-            <StyledNavLink to="/quotes">Натхнення</StyledNavLink>
+            <StyledNavLink to="/quotes">Мотивація</StyledNavLink>
           </NavMenu>
         </Header>
 

@@ -13,8 +13,10 @@ export const Header = styled.header`
   align-items: baseline;
 
   padding: 24px;
-  border: 1px solid blueviolet;
+  /* border: 6px solid transparent; */
   border-radius: 6px;
+
+  background-color: #252827;
 `;
 
 export const NavMenu = styled.nav`
@@ -29,12 +31,13 @@ export const StyledNavLink = styled(NavLink)`
 
   padding: 12px 6px;
 
-  border: 2px solid blueviolet;
+  border: 2px solid transparent;
   border-radius: 6px;
 
-  color: #010101;
+  background-color: #F8CF2C;
 
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
+  color: #291211;
 `;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { quotesData } from "../../data/quotesData.jsx";
-import {StyledButton} from "./QuoteGenerator.styled.jsx"
+import { QuoteContainer, StyledButton } from "./QuoteGenerator.styled.jsx";
 
 export const QuoteGenerator = () => {
   const [quoteItem, setQuoteItem] = useState("");
@@ -17,7 +17,7 @@ export const QuoteGenerator = () => {
   console.log(quoteItem);
 
   return (
-    <div>
+    <QuoteContainer>
       <div>
         {quoteItem ? (
           quoteItem.quote
@@ -31,6 +31,6 @@ export const QuoteGenerator = () => {
         {quoteItem ? " — " + quoteItem.source : <p>— Стів Форбс</p>}
       </div>
       <StyledButton onClick={getQuote}>Ще цитату!</StyledButton>
-    </div>
+    </QuoteContainer>
   );
 };
