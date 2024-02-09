@@ -8,7 +8,12 @@ export const PageContainer = styled.div`
 
   padding: 12px;
 
-  background-color: #F8CF2C;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(30, 78, 128, 1) 100%
+  );
   /* align-items: center;
   justify-content: center; */
 `;

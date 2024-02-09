@@ -12,11 +12,10 @@ export const StyledTitle = styled.h2`
   padding: 12px;
 
   border-radius: 6px;
-  background-color: #252827;
 
   font-size: 24px;
   font-weight: 400;
-  color: #FFFEE6;
+  color: #ffeddf;
 `;
 
 export const BallContainer = styled.div`
@@ -78,7 +77,7 @@ export const StyledButton = styled.button`
 
   border-radius: 6px;
   border-color: transparent;
-  background-color: #252827;
+  background-color: rgb(28, 31, 62);
   font-size: 24px;
   font-weight: 400;
   color: #FFFEE6;

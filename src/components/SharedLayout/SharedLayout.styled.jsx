@@ -16,7 +16,7 @@ export const Header = styled.header`
   /* border: 6px solid transparent; */
   border-radius: 6px;
 
-  background-color: #252827;
+  background: rgb(28, 31, 62);
 `;
 
 export const NavMenu = styled.nav`
@@ -31,13 +31,13 @@ export const StyledNavLink = styled(NavLink)`
 
   padding: 12px 6px;
 
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 6px;
 
-  background-color: #F8CF2C;
+  background-color: #bcc1e171;
 
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  color: #291211;
+  color: #ffeddf;
 `;

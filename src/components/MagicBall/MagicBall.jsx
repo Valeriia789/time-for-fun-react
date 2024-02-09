@@ -42,7 +42,7 @@ export const MagicBall = () => {
     e.preventDefault();
 
     const answerIndex = Math.floor(Math.random() * answers.length);
-    
+
     setAnswer(answers[answerIndex]);
   };
 
@@ -50,8 +50,17 @@ export const MagicBall = () => {
     <>
       <MainContainer>
         <StyledTitle>
-          Вітаю! Це магічна куля пророкувань і прийняття рішень.
+          Вітаю! Це магічна куля пророкувань та прийняття рішень.
         </StyledTitle>
+        <p>
+          Зосередьтесь, чітко сформулюйте питання та натисніть на кнопку
+          "Запитати".
+        </p>
+        <p>
+          *Увага! Куля створена в розважальних цілях, розробник не рекомендує
+          ухвалювати доленосні рішення, покладаючись виключно на відповідь
+          Магічнохї кулі.
+        </p>
         <BallContainer>
           <BallBlack>
             <BallWhite>
@@ -61,7 +70,7 @@ export const MagicBall = () => {
             </BallWhite>
           </BallBlack>
         </BallContainer>
-        <StyledButton onClick={getAnswer}>Натисніть</StyledButton>
+        <StyledButton onClick={getAnswer}>Запитати</StyledButton>
       </MainContainer>
     </>
   );
