@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   MainContainer,
   StyledTitle,
@@ -41,6 +42,7 @@ export const MagicBall = () => {
     e.preventDefault();
 
     const answerIndex = Math.floor(Math.random() * answers.length);
+    
     setAnswer(answers[answerIndex]);
   };
 
