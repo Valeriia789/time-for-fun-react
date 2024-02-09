@@ -1,24 +1,23 @@
 import { Outlet, NavLink } from "react-router-dom";
 
+import { HeaderContainer, Header, NavMenu, StyledNavLink } from "./SharedLayout.styled";
+
 export const SharedLayout = () => {
   return (
-    <div>
-      <header>
-        <div>
-          <span role="img" aria-label="computer icon">
-            💻
-          </span>{" "}
-          GoMerch
-        </div>
-        <nav>
-          <NavLink to="/" end>
-            Головна
-          </NavLink>
-          <NavLink to="/ball">Магічна куля</NavLink>
-          <NavLink to="/quotes">Натхнення</NavLink>
-        </nav>
-      </header>
+    <>
+
+        <Header>
+          <div>TFF Logo</div>
+          <NavMenu>
+            <StyledNavLink to="/" end>
+              Головна
+            </StyledNavLink>
+            <StyledNavLink to="/ball">Магічна куля</StyledNavLink>
+            <StyledNavLink to="/quotes">Натхнення</StyledNavLink>
+          </NavMenu>
+        </Header>
+
       <Outlet />
-    </div>
+    </>
   );
 };
