@@ -2,12 +2,15 @@ import { useState } from "react";
 
 import {
   MainContainer,
+  DescriptionContainer,
   StyledTitle,
+  StyledText,
   BallContainer,
   BallBlack,
   BallWhite,
   BallTextContainer,
   EightContainer,
+  ButtonsContainer,
   StyledButton,
 } from "./MagicBall.styled";
 
@@ -46,21 +49,28 @@ export const MagicBall = () => {
     setAnswer(answers[answerIndex]);
   };
 
+  const resetAnswer = (e) => {
+    e.preventDefault();
+    setAnswer("");
+  };
+
   return (
     <>
       <MainContainer>
-        <StyledTitle>
-          Вітаю! Це магічна куля пророкувань та прийняття рішень.
-        </StyledTitle>
-        <p>
-          Зосередьтесь, чітко сформулюйте питання та натисніть на кнопку
-          "Запитати".
-        </p>
-        <p>
-          *Увага! Куля створена в розважальних цілях, розробник не рекомендує
-          ухвалювати доленосні рішення, покладаючись виключно на відповідь
-          Магічнохї кулі.
-        </p>
+        <DescriptionContainer>
+          <StyledTitle>
+            Вітаю! Це магічна куля пророкувань та прийняття рішень.
+          </StyledTitle>
+          <StyledText>
+            Зосередьтесь, чітко сформулюйте питання та натисніть на кнопку
+            "Запитати".
+          </StyledText>
+          <p>
+            *Увага! Куля створена в розважальних цілях, розробник не рекомендує
+            ухвалювати доленосні рішення, покладаючись виключно на відповідь
+            Магічнохї кулі.
+          </p>
+        </DescriptionContainer>
         <BallContainer>
           <BallBlack>
             <BallWhite>
@@ -70,7 +80,10 @@ export const MagicBall = () => {
             </BallWhite>
           </BallBlack>
         </BallContainer>
-        <StyledButton onClick={getAnswer}>Запитати</StyledButton>
+        <ButtonsContainer>
+          <StyledButton onClick={getAnswer}>Запитати</StyledButton>
+          <StyledButton onClick={resetAnswer}>Очистити</StyledButton>
+        </ButtonsContainer>
       </MainContainer>
     </>
   );

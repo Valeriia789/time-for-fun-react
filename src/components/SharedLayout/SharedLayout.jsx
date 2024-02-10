@@ -7,7 +7,7 @@ export const SharedLayout = () => {
     <>
 
         <Header>
-          <div>TFF Logo</div>
+          <div><p>TFF Logo</p></div>
           <NavMenu>
             <StyledNavLink to="/" end>
               Головна

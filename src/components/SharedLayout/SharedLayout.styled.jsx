@@ -5,16 +5,15 @@ export const HeaderContainer = styled.div``;
 
 export const Header = styled.header`
   max-width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 
   align-items: baseline;
 
   padding: 24px;
   /* border: 6px solid transparent; */
-  border-radius: 6px;
 
   background: rgb(28, 31, 62);
 `;
@@ -34,10 +33,16 @@ export const StyledNavLink = styled(NavLink)`
   border: 1px solid transparent;
   border-radius: 6px;
 
-  background-color: #bcc1e171;
-
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   text-decoration: none;
-  color: #ffeddf;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  color: rgb(249, 249, 249);
+
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.5) 0%,
+    rgba(30, 78, 128, 0.5) 97%
+  );
 `;
