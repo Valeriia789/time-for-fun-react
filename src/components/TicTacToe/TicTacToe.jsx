@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TicTacToeContainer, Row, SquareBtn } from "./TicTacToe.styled";
+import { TicTacToeContainer, Row, SquareBtn, StyledButton } from "./TicTacToe.styled";
 
 function Square({ value, onClick }) {
   return <SquareBtn onClick={onClick}>{value}</SquareBtn>;
@@ -68,6 +68,7 @@ export const TicTacToe = () => {
 
   return (
     <TicTacToeContainer>
+      <h2>В цю гру треба грати удвох</h2>
       <Row>
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
@@ -87,7 +88,7 @@ export const TicTacToe = () => {
       </Row>
 
       <p>{status}</p>
-      <button onClick={handleRestart}>Нова гра</button>
+      <StyledButton onClick={handleRestart}>Нова гра</StyledButton>
     </TicTacToeContainer>
   );
 };

@@ -1,10 +1,11 @@
 import { TicTacToe } from "../../components/TicTacToe/TicTacToe";
+import { PageContainer } from "./TicTacToePage.styled";
 
 const TicTacToePage = () => {
   return (
-    <div>
-      <TicTacToe/>
-    </div>
+    <PageContainer>
+      <TicTacToe />
+    </PageContainer>
   );
 };
 
