@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { quotesData } from "../../data/quotesData.jsx";
-import { QuoteContainer, StyledButton } from "./QuoteGenerator.styled.jsx";
+import {
+  QuoteMainContainer,
+  QuoteContainer,
+  StyledQuote,
+  StyledSource,
+  StyledButton,
+} from "./QuoteGenerator.styled.jsx";
 
 export const QuoteGenerator = () => {
   const [quoteItem, setQuoteItem] = useState("");
@@ -17,20 +23,23 @@ export const QuoteGenerator = () => {
   console.log(quoteItem);
 
   return (
-    <QuoteContainer>
-      <div>
+    <QuoteMainContainer>
+      <QuoteContainer>
         {quoteItem ? (
-          quoteItem.quote
+          <StyledQuote>« {quoteItem.quote} »</StyledQuote>
         ) : (
-          <p>
-            "Одне закінчене результативне завдання вартує півсотні
-            напівзакінчених."
-          </p>
+          <StyledQuote>
+            « Одне закінчене результативне завдання вартує півсотні
+            напівзакінчених. »
+          </StyledQuote>
         )}
-
-        {quoteItem ? " — " + quoteItem.source : <p>— Стів Форбс</p>}
-      </div>
+        {quoteItem ? (
+          <StyledSource>— {quoteItem.source}</StyledSource>
+        ) : (
+          <StyledSource>— Стів Форбс</StyledSource>
+        )}
+      </QuoteContainer>
       <StyledButton onClick={getQuote}>Ще цитату!</StyledButton>
-    </QuoteContainer>
+    </QuoteMainContainer>
   );
 };
