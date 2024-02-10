@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { TicTacToeContainer, Row, SquareBtn, StyledButton } from "./TicTacToe.styled";
+import {
+  TicTacToeContainer,
+  Row,
+  SquareBtn,
+  StyledButton,
+} from "./TicTacToe.styled";
 
 function Square({ value, onClick }) {
   return <SquareBtn onClick={onClick}>{value}</SquareBtn>;
