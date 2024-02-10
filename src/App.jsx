@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
 import MagicBallPage from "./pages/MagicBallPage/MagicBallPage";
@@ -10,7 +10,6 @@ import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 
 export const App = () => {
   return (
-    <BrowserRouter basename="time-for-fun-react">
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
@@ -21,6 +20,5 @@ export const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 };

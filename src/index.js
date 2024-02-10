@@ -9,7 +9,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/time-for-fun-react">
       <App />
     </BrowserRouter>
   </StrictMode>
