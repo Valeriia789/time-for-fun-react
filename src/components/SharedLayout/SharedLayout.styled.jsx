@@ -13,7 +13,7 @@ export const Header = styled.header`
   padding: 24px;
   /* border: 6px solid transparent; */
 
-  background: rgb(28, 31, 62);
+  background: rgb(50, 50, 50);
 `;
 
 export const NavMenu = styled.nav`
