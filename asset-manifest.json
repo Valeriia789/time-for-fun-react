@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.js": "/time-for-fun-react/static/js/main.02ef03e7.js",
+    "main.js": "/time-for-fun-react/static/js/main.cae17b6b.js",
+    "static/media/imgBall.svg": "/time-for-fun-react/static/media/imgBall.9ebe49eb31a290230fe7a072e2425962.svg",
+    "static/media/imgMagicBall.svg": "/time-for-fun-react/static/media/imgMagicBall.f818bfb8b496295d835fb2ffbff02e6b.svg",
+    "static/media/imgTicTacToe.svg": "/time-for-fun-react/static/media/imgTicTacToe.9770b7c59c8c85d29942de3f5026a4b8.svg",
+    "static/media/imgQuote.svg": "/time-for-fun-react/static/media/imgQuote.ddf9672f9d0c5bd78e95f8d479dfc4f4.svg",
     "index.html": "/time-for-fun-react/index.html",
-    "main.02ef03e7.js.map": "/time-for-fun-react/static/js/main.02ef03e7.js.map"
+    "main.cae17b6b.js.map": "/time-for-fun-react/static/js/main.cae17b6b.js.map"
   },
   "entrypoints": [
-    "static/js/main.02ef03e7.js"
+    "static/js/main.cae17b6b.js"
   ]
 }
