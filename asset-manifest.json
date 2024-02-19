@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.js": "/time-for-fun-react/static/js/main.cae17b6b.js",
-    "static/media/imgBall.svg": "/time-for-fun-react/static/media/imgBall.9ebe49eb31a290230fe7a072e2425962.svg",
-    "static/media/imgMagicBall.svg": "/time-for-fun-react/static/media/imgMagicBall.f818bfb8b496295d835fb2ffbff02e6b.svg",
-    "static/media/imgTicTacToe.svg": "/time-for-fun-react/static/media/imgTicTacToe.9770b7c59c8c85d29942de3f5026a4b8.svg",
-    "static/media/imgQuote.svg": "/time-for-fun-react/static/media/imgQuote.ddf9672f9d0c5bd78e95f8d479dfc4f4.svg",
+    "main.css": "/time-for-fun-react/static/css/main.b136fdb3.css",
+    "main.js": "/time-for-fun-react/static/js/main.fee6c5fb.js",
+    "static/media/bodyBgi.jpg": "/time-for-fun-react/static/media/bodyBgi.ee3096de305eba17776b.jpg",
+    "static/media/imgHome.svg": "/time-for-fun-react/static/media/imgHome.95519b765633b9c07f0efa32ef88902d.svg",
+    "static/media/imgQuoteAuthor.svg": "/time-for-fun-react/static/media/imgQuoteAuthor.891905bcb8fbd76f3f6ba0f35fa2cdfd.svg",
+    "static/media/imgMagicBall.svg": "/time-for-fun-react/static/media/imgMagicBall.403c1b9af3ad9d700cc9b23db9c7353c.svg",
+    "static/media/imgTicTacToe.svg": "/time-for-fun-react/static/media/imgTicTacToe.fde878bd5a14bb056d60bd637a70b507.svg",
     "index.html": "/time-for-fun-react/index.html",
-    "main.cae17b6b.js.map": "/time-for-fun-react/static/js/main.cae17b6b.js.map"
+    "main.b136fdb3.css.map": "/time-for-fun-react/static/css/main.b136fdb3.css.map",
+    "main.fee6c5fb.js.map": "/time-for-fun-react/static/js/main.fee6c5fb.js.map"
   },
   "entrypoints": [
-    "static/js/main.cae17b6b.js"
+    "static/css/main.b136fdb3.css",
+    "static/js/main.fee6c5fb.js"
   ]
 }
