@@ -1,7 +1,9 @@
 body {
-  background-image: url("../images/bodyBgi.jpg");
+  background-image: url("../images/imgBodyBg.jpg");
+  background-position: center center;
   background-size: cover;
-
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body,
@@ -114,12 +116,6 @@ a {
 button {
   display: inline-block;
   cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 /* @import '../node_modules/modern-normalize/modern-normalize.css'; */
