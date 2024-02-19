@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/time-for-fun-react/static/css/main.b136fdb3.css",
-    "main.js": "/time-for-fun-react/static/js/main.fee6c5fb.js",
-    "static/media/bodyBgi.jpg": "/time-for-fun-react/static/media/bodyBgi.ee3096de305eba17776b.jpg",
+    "main.css": "/time-for-fun-react/static/css/main.e7de6e47.css",
+    "main.js": "/time-for-fun-react/static/js/main.e899ab1f.js",
+    "static/media/imgBodyBg.jpg": "/time-for-fun-react/static/media/imgBodyBg.f12beb94b550552781ee.jpg",
     "static/media/imgHome.svg": "/time-for-fun-react/static/media/imgHome.95519b765633b9c07f0efa32ef88902d.svg",
     "static/media/imgQuoteAuthor.svg": "/time-for-fun-react/static/media/imgQuoteAuthor.891905bcb8fbd76f3f6ba0f35fa2cdfd.svg",
     "static/media/imgMagicBall.svg": "/time-for-fun-react/static/media/imgMagicBall.403c1b9af3ad9d700cc9b23db9c7353c.svg",
     "static/media/imgTicTacToe.svg": "/time-for-fun-react/static/media/imgTicTacToe.fde878bd5a14bb056d60bd637a70b507.svg",
     "index.html": "/time-for-fun-react/index.html",
-    "main.b136fdb3.css.map": "/time-for-fun-react/static/css/main.b136fdb3.css.map",
-    "main.fee6c5fb.js.map": "/time-for-fun-react/static/js/main.fee6c5fb.js.map"
+    "main.e7de6e47.css.map": "/time-for-fun-react/static/css/main.e7de6e47.css.map",
+    "main.e899ab1f.js.map": "/time-for-fun-react/static/js/main.e899ab1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.b136fdb3.css",
-    "static/js/main.fee6c5fb.js"
+    "static/css/main.e7de6e47.css",
+    "static/js/main.e899ab1f.js"
   ]
 }
