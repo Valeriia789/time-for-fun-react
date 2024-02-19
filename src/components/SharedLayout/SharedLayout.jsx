@@ -5,16 +5,12 @@ import { Header, NavMenu, StyledNavLink } from "./SharedLayout.styled";
 export const SharedLayout = () => {
   return (
     <>
-
         <Header>
-          <div><p>TFF Logo</p></div>
           <NavMenu>
             <StyledNavLink to="/" end>
               Головна
+              {/* <img width="200px" src={House16} alt="" /> */}
             </StyledNavLink>
-            <StyledNavLink to="/ball">Магічна куля</StyledNavLink>
-            <StyledNavLink to="/quotes">Мотивація</StyledNavLink>
-            <StyledNavLink to="/tic-tac-toe">Х-О</StyledNavLink>
           </NavMenu>
         </Header>
 

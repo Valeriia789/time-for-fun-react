@@ -2,13 +2,20 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const PageContainer = styled.div`
-  background: rgb(250, 224, 192);
+display: flex;
+align-items: center;
+justify-content: center;
+  background-color: rgba(84, 120, 80, 0.584);
 `;
 
 export const NavContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 12px;
+
+  @media screen and (min-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const NavLinkStyled = styled(NavLink)`
@@ -17,8 +24,8 @@ export const NavLinkStyled = styled(NavLink)`
 
   padding: 6px 24px;
 
-  border: 1px solid transparent;
-  background-color: rgba(251, 246, 241, 0.568);
+  border: 2px solid rgba(30, 95, 31, 0.854);
+  background-color: rgba(35, 54, 33, 0.584);
 
   text-decoration: none;
 `;
@@ -32,7 +39,7 @@ export const TitleStyled = styled.h2`
   font-size: 32px;
   font-weight: 600;
 
-  text-shadow: 1px 1px 2px rgb(250, 224, 192), 0 0 1em rgb(250, 224, 192),
-    0 0 0.2em rgb(250, 224, 192);
-  color: rgb(50, 50, 50);
+  text-shadow: 1px 1px 2px rgba(30, 95, 31, 0.854),
+    0 0 1em rgba(30, 95, 31, 0.854), 0 0 0.2em rgba(30, 95, 31, 0.854);
+  color: rgb(215, 220, 195);
 `;

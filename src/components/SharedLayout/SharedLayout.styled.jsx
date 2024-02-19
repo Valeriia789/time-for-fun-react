@@ -2,13 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
-  max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-
-  align-items: baseline;
+  justify-content: end;
 
   padding: 24px;
   /* border: 6px solid transparent; */
@@ -17,9 +12,6 @@ export const Header = styled.header`
 `;
 
 export const NavMenu = styled.nav`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -28,19 +20,13 @@ export const StyledNavLink = styled(NavLink)`
 
   padding: 12px 6px;
 
-  border: 1px solid transparent;
+  border: 1px solid rgba(30, 95, 31, 0.854);
   border-radius: 6px;
+  
+  background-color: rgba(35, 54, 33, 0.616);
 
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-  color: rgb(249, 249, 249);
-
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 0.5) 0%,
-    rgba(30, 78, 128, 0.5) 97%
-  );
+  color: rgb(215, 220, 195);
 `;

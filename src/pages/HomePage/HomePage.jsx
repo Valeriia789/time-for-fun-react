@@ -8,9 +8,9 @@ import {
   TitleStyled,
 } from "./HomePage.styled";
 
-import imgMagicBall from "../../images/imgMagicBall.svg";
-import imgBall from "../../images/imgBall.svg";
-import imgQuote from "../../images/imgQuote.svg";
+import imgHome from '../../images/imgHome.svg'
+import imgMagicBall from '../../images/imgMagicBall.svg'
+import imgQuoteAuthor from '../../images/imgQuoteAuthor.svg'
 import imgTicTacToe from "../../images/imgTicTacToe.svg";
 
 const HomePage = () => {
@@ -18,6 +18,7 @@ const HomePage = () => {
     <PageContainer>
       <NavContainer>
         <NavLinkStyled to="/" end>
+        <img width="200px" src={imgHome} alt="" />
           <TitleStyled>Головна</TitleStyled>
         </NavLinkStyled>
 
@@ -27,7 +28,7 @@ const HomePage = () => {
         </NavLinkStyled>
 
         <NavLinkStyled to="/quotes">
-          <img width="200px" src={imgQuote} alt="" />
+          <img width="200px" src={imgQuoteAuthor} alt="" />
           <TitleStyled>Мотивація</TitleStyled>
         </NavLinkStyled>
 
