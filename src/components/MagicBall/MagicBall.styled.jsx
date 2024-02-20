@@ -5,19 +5,22 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-color: rgba(25, 50, 25, 0.75);
 `;
 
 export const DescriptionContainer = styled.div`
-  width: 100%;
-
+  display: grid;
+  gap: 12px;
   padding: 24px;
+
+  text-align: center;
   color: rgb(249, 249, 249);
 `;
 
 export const StyledTitle = styled.h2`
-  margin: 0;
-
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
 `;
 
 export const StyledText = styled.p`
@@ -60,7 +63,7 @@ export const BallTextContainer = styled.div`
 
   text-align: center;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
 `;
 
 export const EightContainer = styled.div`
@@ -72,7 +75,7 @@ export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  width: 100%;
+  width: 80%;
   padding: 24px;
 `;
 
