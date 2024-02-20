@@ -1,19 +1,18 @@
 {
   "files": {
     "main.css": "/time-for-fun-react/static/css/main.c6519350.css",
-    "main.js": "/time-for-fun-react/static/js/main.c9dc5e15.js",
+    "main.js": "/time-for-fun-react/static/js/main.fa37e526.js",
     "static/media/imgBodyBg.jpg": "/time-for-fun-react/static/media/imgBodyBg.f12beb94b550552781ee.jpg",
     "static/media/imgHome.svg": "/time-for-fun-react/static/media/imgHome.95519b765633b9c07f0efa32ef88902d.svg",
     "static/media/imgQuoteAuthor.svg": "/time-for-fun-react/static/media/imgQuoteAuthor.891905bcb8fbd76f3f6ba0f35fa2cdfd.svg",
-    "static/media/House13.svg": "/time-for-fun-react/static/media/House13.5460d2043d926d3f467859d24de916fd.svg",
     "static/media/imgMagicBall.svg": "/time-for-fun-react/static/media/imgMagicBall.403c1b9af3ad9d700cc9b23db9c7353c.svg",
     "static/media/imgTicTacToe.svg": "/time-for-fun-react/static/media/imgTicTacToe.fde878bd5a14bb056d60bd637a70b507.svg",
     "index.html": "/time-for-fun-react/index.html",
     "main.c6519350.css.map": "/time-for-fun-react/static/css/main.c6519350.css.map",
-    "main.c9dc5e15.js.map": "/time-for-fun-react/static/js/main.c9dc5e15.js.map"
+    "main.fa37e526.js.map": "/time-for-fun-react/static/js/main.fa37e526.js.map"
   },
   "entrypoints": [
     "static/css/main.c6519350.css",
-    "static/js/main.c9dc5e15.js"
+    "static/js/main.fa37e526.js"
   ]
 }
