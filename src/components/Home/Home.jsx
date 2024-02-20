@@ -8,10 +8,10 @@ import imgTicTacToe from "../../images/imgTicTacToe.svg";
 const Home = () => {
   return (
     <NavContainer>
-      <NavLinkStyled to="/" end>
+      {/* <NavLinkStyled to="/" end>
         <img width="200px" src={imgHome} alt="" />
         <TitleStyled>Головна</TitleStyled>
-      </NavLinkStyled>
+      </NavLinkStyled> */}
 
       <NavLinkStyled to="/ball">
         <img width="200px" src={imgMagicBall} alt="" />

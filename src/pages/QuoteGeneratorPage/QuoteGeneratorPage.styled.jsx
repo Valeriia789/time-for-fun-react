@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   padding: 12px;
 
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(30, 78, 128, 0.5) 0%,
-    rgba(238, 174, 202, 0.5) 100%
-  );
+  background-color: rgba(108, 158, 110, 0.708);
+  
+  @media screen and (min-width: 576px) {
+    padding: 24px;
+  }
+
 `;

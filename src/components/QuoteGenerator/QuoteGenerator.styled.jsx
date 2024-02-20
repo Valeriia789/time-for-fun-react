@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const QuoteMainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 12px;
 
-  height: 70%;
-
+  grid-template-rows: 10fr 1fr;
   font-size: 32px;
 `;
 

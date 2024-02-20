@@ -21,17 +21,18 @@ export const NavLinkStyled = styled(NavLink)`
 
   padding: 6px 12px;
 
-  border: 2px solid rgba(30, 50, 30, 0.85);
+  border: 2px solid transparent;
   border-radius: 6px;
   background-color: rgba(25, 50, 25, 0.75);
 
-  box-shadow: 0px 6px 12px rgba(160, 180, 160, 0.75);
+  box-shadow: 0px 6px 12px rgba(27, 70, 27, 0.75);
 
   text-decoration: none;
 
   &:focus,
   &:hover {
-    box-shadow: 0px 6px 24px rgb(185, 175, 30, 0.75);
+    border: 2px solid rgba(30, 50, 30, 0.85);
+    box-shadow: 0px 6px 24px rgba(20, 30, 20, 0.95);
   }
 
   @media screen and (min-width: 576px) {

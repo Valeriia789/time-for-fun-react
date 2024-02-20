@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import House13 from "../../images/House13.svg";
+// import House13 from "../../images/House13.svg";
+import imgHome from "../../images/imgHome.svg";
 
 import { StyledHeader, NavMenu, StyledNavLink, StyledText } from "./Header.styled";
 
@@ -10,9 +11,8 @@ export const Header = () => {
       <StyledHeader>
         <NavMenu>
           <StyledNavLink to="/" end>
-          <img width="100px" src={House13} alt="" />
-          <StyledText>Головна</StyledText>
-            {/* Головна */}
+          <img width="100px" src={imgHome} alt="" />
+          {/* <StyledText>Головна</StyledText> */}
             {/* <img width="200px" src={House16} alt="" /> */}
           </StyledNavLink>
         </NavMenu>
