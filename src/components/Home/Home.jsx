@@ -1,6 +1,6 @@
 import { NavContainer, NavLinkStyled, TitleStyled } from "./Home.styled";
 
-import imgHome from "../../images/imgHome.svg";
+// import imgHome from "../../images/imgHome.svg";
 import imgMagicBall from "../../images/imgMagicBall.svg";
 import imgQuoteAuthor from "../../images/imgQuoteAuthor.svg";
 import imgTicTacToe from "../../images/imgTicTacToe.svg";
@@ -25,6 +25,11 @@ const Home = () => {
 
       <NavLinkStyled to="/tic-tac-toe">
         <img width="200px" src={imgTicTacToe} alt="" />
+        <TitleStyled>Гра</TitleStyled>
+      </NavLinkStyled>
+
+      <NavLinkStyled to="/rock-paper-scissors">
+        {/* <img width="200px" src={imgTicTacToe} alt="" /> */}
         <TitleStyled>Гра</TitleStyled>
       </NavLinkStyled>
     </NavContainer>
