@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+{
+  /* <a href="https://www.freepik.com/free-vector/children-playing-rock-paper-scissors_5361193.htm#fromView=search&page=8&position=46&uuid=aec917a8-25b6-4306-8234-a356b43ca5d9">Image by brgfx</a> on Freepik */
+}
+
 export const MainContainer = styled.div`
   text-align: center;
 `;
@@ -29,7 +33,7 @@ export const StyledScore = styled.div`
   font-weight: bold;
 
   background-color: #1b6528;
-`
+`;
 
 export const StyledAction = styled.div`
   display: flex;
@@ -40,7 +44,7 @@ export const StyledAction = styled.div`
   align-items: center;
 
   color: #c5dada;
-`
+`;
 
 export const RoundButton = styled.button`
   width: 50px;
@@ -56,7 +60,7 @@ export const RoundButton = styled.button`
   background-color: #133e10;
   color: aliceblue;
 
-  &:hover{
+  &:hover {
     background-color: #7dd786;
   }
 `;

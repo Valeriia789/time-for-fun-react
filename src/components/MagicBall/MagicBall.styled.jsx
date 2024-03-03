@@ -84,11 +84,17 @@ export const StyledButton = styled.button`
 
   padding: 12px;
 
+  border: 2px solid transparent;
   border-radius: 6px;
-  border-color: transparent;
-  background-color: rgb(28, 31, 62);
+  background-color: rgba(7, 14, 7, 0.75);
 
   font-size: 24px;
   font-weight: 400;
   color: rgb(249, 249, 249);
+
+  &:focus,
+  &:hover {
+    border: 2px solid rgba(115, 165, 11, 0.5);
+    box-shadow: 0px 6px 24px rgba(115, 165, 11, 0.85);
+  }
 `;

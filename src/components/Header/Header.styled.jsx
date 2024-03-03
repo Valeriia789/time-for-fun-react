@@ -29,16 +29,17 @@ export const StyledNavLink = styled(NavLink)`
 
   padding: 0 32px;
 
+  border: 2px solid transparent;
   border-radius: 5%;
 
-  color: rgb(254, 183, 18);
+  /* color: rgb(254, 183, 18); */
 
   &:focus,
   &:hover {
-    box-shadow: 0px 6px 24px rgba(27, 70, 27, 0.75);
-    background-color: rgba(25, 50, 25, 0.8);
+    border: 2px solid rgba(115, 165, 11, 0.85);
+    box-shadow: 0px 6px 24px rgba(115, 165, 11, 0.85);
   }
-
+  
   @media screen and (min-width: 576px) {
     padding: 0 40px;
   }

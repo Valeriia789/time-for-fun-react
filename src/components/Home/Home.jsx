@@ -4,6 +4,7 @@ import { NavContainer, NavLinkStyled, TitleStyled } from "./Home.styled";
 import imgMagicBall from "../../images/imgMagicBall.svg";
 import imgQuoteAuthor from "../../images/imgQuoteAuthor.svg";
 import imgTicTacToe from "../../images/imgTicTacToe.svg";
+import imgRockPaperScissors from '../../images/imgRockPaperScissors.svg'
 
 const Home = () => {
   return (
@@ -29,7 +30,7 @@ const Home = () => {
       </NavLinkStyled>
 
       <NavLinkStyled to="/rock-paper-scissors">
-        {/* <img width="200px" src={imgTicTacToe} alt="" /> */}
+        <img width="200px" src={imgRockPaperScissors} alt="" />
         <TitleStyled>Гра</TitleStyled>
       </NavLinkStyled>
     </NavContainer>
