@@ -1,9 +1,15 @@
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
 // import House13 from "../../images/House13.svg";
 import imgHome from "../../images/imgHome.svg";
 
-import { StyledHeader, NavMenu, StyledNavLink, StyledText } from "./Header.styled";
+import {
+  StyledHeader,
+  NavMenu,
+  StyledNavLink,
+  StyledText,
+} from "./Header.styled";
 
 export const Header = () => {
   return (
@@ -11,14 +17,16 @@ export const Header = () => {
       <StyledHeader>
         <NavMenu>
           <StyledNavLink to="/" end>
-          <img width="100px" src={imgHome} alt="" />
-          {/* <StyledText>Головна</StyledText> */}
+            <img width="100px" src={imgHome} alt="" />
+            {/* <StyledText>Головна</StyledText> */}
             {/* <img width="200px" src={House16} alt="" /> */}
           </StyledNavLink>
         </NavMenu>
       </StyledHeader>
 
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

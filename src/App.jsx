@@ -1,13 +1,14 @@
+import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import HomePage from "./pages/HomePage/HomePage";
-import MagicBallPage from "./pages/MagicBallPage/MagicBallPage";
-import QuoteGeneratorPage from "./pages/QuoteGeneratorPage/QuoteGeneratorPage";
-import TicTacToePage from "./pages/TicTacToePage/TicTacToePage";
-import RockPaperScissorsPage from "./pages/RockPaperScissorsPage/RockPaperScissorsPage";
-
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import { Header } from "./components/Header/Header";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const MagicBallPage = lazy(() => import("./pages/MagicBallPage/MagicBallPage"));
+const QuoteGeneratorPage = lazy(() => import("./pages/QuoteGeneratorPage/QuoteGeneratorPage"));
+const TicTacToePage = lazy(() => import("./pages/TicTacToePage/TicTacToePage"));
+const RockPaperScissorsPage = lazy(() => import("./pages/RockPaperScissorsPage/RockPaperScissorsPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 export const App = () => {
   return (
