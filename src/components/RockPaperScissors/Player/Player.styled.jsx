@@ -9,7 +9,7 @@ export const PlayerContainer = styled.div`
 
   margin: 10px;
 
-  background-color: grey;
+  background-color: rgb(55, 91, 88);
 `;
 
 export const StyledScore = styled.div`
@@ -17,7 +17,7 @@ export const StyledScore = styled.div`
   font-size: small;
   font-weight: bold;
 
-  background-color: #1b6528;
+  background-color: rgb(73, 128, 110);
 `;
 
 export const StyledAction = styled.div`
@@ -28,5 +28,5 @@ export const StyledAction = styled.div`
   justify-content: center;
   align-items: center;
 
-  color: #ffffff;
+  color: rgb(225, 220, 144);
 `;

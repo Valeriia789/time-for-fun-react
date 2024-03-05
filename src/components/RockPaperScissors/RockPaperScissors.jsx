@@ -47,14 +47,6 @@ export const RockPaperScissors = () => {
       <h2>Rock Paper Scissors</h2>
       <GameContainer>
         <div>
-          <Player name="Player" score={playerScore} action={playerAction} />
-          <Player
-            name="Computer"
-            score={computerScore}
-            action={computerAction}
-          />
-        </div>
-        <div>
           <h3>Choose: </h3>
           <ActionButton action="rock" onActionSelected={onActionSelected}>
             {/* <img width="50px" src={iconRock} alt="" /> */}
@@ -65,6 +57,14 @@ export const RockPaperScissors = () => {
           <ActionButton action="scissors" onActionSelected={onActionSelected}>
             {/* <img width="50px" src={iconScissors} alt="" /> */}
           </ActionButton>
+        </div>
+        <div>
+          <Player name="Player" score={playerScore} action={playerAction} />
+          <Player
+            name="Computer"
+            score={computerScore}
+            action={computerAction}
+          />
         </div>
         <ShowWinner winner={winner} />
       </GameContainer>

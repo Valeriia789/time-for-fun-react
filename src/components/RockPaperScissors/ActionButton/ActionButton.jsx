@@ -8,8 +8,8 @@ export const ActionButton = ({ action = "rock", onActionSelected }) => {
   };
 
   return (
-    <button onClick={handleClick}>
+    <StyledButton onClick={handleClick}>
       <ActionIcon action={action} size={40} />
-    </button>
+    </StyledButton>
   );
 };

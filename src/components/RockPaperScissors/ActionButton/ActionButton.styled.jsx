@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 
   margin: 2px;
 
@@ -11,10 +11,14 @@ export const StyledButton = styled.button`
 
   cursor: pointer;
 
-  background-color: #e9df54;
-  color: #da9191;
+  background-color: rgb(225, 220, 144);
+  color: rgb(73, 128, 110);
+
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: #7dd786;
+    background-color: rgb(255, 252, 100);
+
+    transform: translateY(-4px);
   }
 `;
