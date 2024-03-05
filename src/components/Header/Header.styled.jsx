@@ -31,13 +31,16 @@ export const StyledNavLink = styled(NavLink)`
 
   border: 2px solid transparent;
   border-radius: 5%;
-
-  /* color: rgb(254, 183, 18); */
+  outline: none;
+  
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
   &:hover {
-    border: 2px solid rgba(115, 165, 11, 0.85);
+    border: 2px solid rgba(115, 165, 11, 0.3);
     box-shadow: 0px 6px 24px rgba(115, 165, 11, 0.85);
+
+    transform: revert;
   }
   
   @media screen and (min-width: 576px) {
