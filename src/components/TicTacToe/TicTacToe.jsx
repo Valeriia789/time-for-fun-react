@@ -3,6 +3,9 @@ import {
   TicTacToeContainer,
   Row,
   SquareBtn,
+  StyledTitle,
+  StyledDescription,
+  StyledScore,
   StyledButton,
 } from "./TicTacToe.styled";
 
@@ -65,15 +68,16 @@ export const TicTacToe = () => {
     if (!getWinner(squares) && squares.every((item) => item !== "")) {
       setStatus(`Нічия! Почніть нову гру.`);
     } else if (getWinner(squares)) {
-      setStatus(`Переможець ${getWinner(squares)}`);
+      setStatus(`Переміг гравець: ${getWinner(squares)}`);
     } else {
-      setStatus(`Зараз хід: ${isXTurn ? "X" : "O"}`);
+      setStatus(`Зараз ходить гравець: ${isXTurn ? "X" : "O"}`);
     }
   }, [squares, isXTurn]);
 
   return (
     <TicTacToeContainer>
-      <h2>В цю гру треба грати удвох</h2>
+      <StyledTitle>Хрестики-нулики</StyledTitle>
+      <StyledDescription>*На цій дошці мають грати два гравці </StyledDescription>
       <Row>
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
@@ -92,7 +96,7 @@ export const TicTacToe = () => {
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </Row>
 
-      <p>{status}</p>
+      <StyledScore>{status}</StyledScore>
       <StyledButton onClick={handleRestart}>Нова гра</StyledButton>
     </TicTacToeContainer>
   );

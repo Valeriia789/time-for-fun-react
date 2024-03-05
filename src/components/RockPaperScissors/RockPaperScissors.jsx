@@ -5,7 +5,7 @@ import { Player } from "./Player/Player";
 import { ActionButton } from "./ActionButton/ActionButton";
 import { ShowWinner } from "./ShowWinner/ShowWinner";
 
-import { MainContainer, GameContainer } from "./RockPaperScissors.styled";
+import { MainContainer, StyledTitle, StyledDescription, ResultContainer, GameContainer } from "./RockPaperScissors.styled";
 
 export const RockPaperScissors = () => {
   const [gameState, setGameState] = useState({
@@ -44,10 +44,12 @@ export const RockPaperScissors = () => {
 
   return (
     <MainContainer>
-      <h2>Rock Paper Scissors</h2>
+      <StyledTitle>Камінь, ножиці, папір</StyledTitle>
+      <StyledDescription>*У цій грі вашим суперником буде комп'ютер</StyledDescription>
+      {/* <StyledDescription>Пам'ятайте, що ножиці ріжуть папір, камінь сильніший за ножиці, а папір може накрити камінь.</StyledDescription> */}
       <GameContainer>
         <div>
-          <h3>Choose: </h3>
+          <p>Ваш хід: </p>
           <ActionButton action="rock" onActionSelected={onActionSelected}>
             {/* <img width="50px" src={iconRock} alt="" /> */}
           </ActionButton>
@@ -58,14 +60,14 @@ export const RockPaperScissors = () => {
             {/* <img width="50px" src={iconScissors} alt="" /> */}
           </ActionButton>
         </div>
-        <div>
-          <Player name="Player" score={playerScore} action={playerAction} />
+        <ResultContainer>
+          <Player name="Гравець" score={playerScore} action={playerAction} />
           <Player
-            name="Computer"
+            name="Комп'ютер"
             score={computerScore}
             action={computerAction}
           />
-        </div>
+        </ResultContainer>
         <ShowWinner winner={winner} />
       </GameContainer>
     </MainContainer>

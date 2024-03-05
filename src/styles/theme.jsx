@@ -90,8 +90,13 @@ export const theme = {
     white: '#FFFFFF',
     black: '#111111',
 
-    primary: '',
-    secondary: '',
+    componentBgc: 'rgba(25, 50, 25, 0.75)',
+
+    textPrimary: 'rgb(215, 220, 195)',
+    textSecondary: '',
+
+    bgcPrimary: 'rgba(7, 14, 7, 0.75)',
+    bgcSecondary: '',
 
     btnMain: '',
     btnAccent: '',

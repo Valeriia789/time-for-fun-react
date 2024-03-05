@@ -23,7 +23,7 @@ export const NavLinkStyled = styled(NavLink)`
 
   border: 2px solid transparent;
   border-radius: 6px;
-  background-color: rgba(7, 14, 7, 0.75);
+  background-color: ${(p) => p.theme.colors.bgcPrimary};
 
   outline: none;
   text-decoration: none;
@@ -50,9 +50,10 @@ export const TitleStyled = styled.h2`
   font-size: 18px;
   font-weight: 600;
 
-  text-shadow: 1px 1px 2px rgba(30, 95, 31, 0.854),
-    0 0 1em rgba(30, 95, 31, 0.854), 0 0 0.2em rgba(30, 95, 31, 0.854);
-  color: rgb(215, 220, 195);
+  /* text-shadow: 1px 1px 2px rgba(30, 95, 31, 0.854),
+    0 0 1em rgba(30, 95, 31, 0.854), 0 0 0.2em rgba(30, 95, 31, 0.854); */
+
+  color: ${(p) => p.theme.colors.textPrimary};
 
   @media screen and (min-width: 576px) {
     font-size: 24px;

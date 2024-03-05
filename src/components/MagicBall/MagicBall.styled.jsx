@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(25, 50, 25, 0.75);
+  background-color: ${(p) => p.theme.colors.componentBgc};
 `;
 
 export const DescriptionContainer = styled.div`
