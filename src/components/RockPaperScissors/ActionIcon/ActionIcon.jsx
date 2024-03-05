@@ -1,13 +1,12 @@
-// import {  } from "";
+import { FaHandRock, FaHandPaper, FaHandScissors } from "react-icons/fa";
 
-export const ActionIcon = ({ action, ...props }) => {
+export const ActionIcon = ({ action, size }) => {
   const actionIcons = {
-    rock: 'rock1',
-    paper: 'paper2',
-    scissors: 'scissors3',
+    rock: FaHandRock,
+    paper: FaHandPaper,
+    scissors: FaHandScissors,
   };
 
-  const Icon = actionIcons[action];
-
-  return <Icon {...props}/>;
+  const Icon = actionIcons[action] || FaHandRock; // Default to rock if action is invalid
+  return <Icon size={size} />;
 };
