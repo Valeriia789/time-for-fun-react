@@ -1,8 +1,8 @@
 export const ShowWinner = ({ winner = 0 }) => {
   const text = {
-    "-1": "You win :)",
-    0: "It's a Tie :|",
-    1: "You Lose :(",
+    "-1": "Цього разу перемога за тобою",
+    0: "Я не програв - не виграли",
+    1: "Повстання машин скоро :D",
   };
 
   return <h2>{text[winner]}</h2>;
