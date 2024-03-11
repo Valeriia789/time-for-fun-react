@@ -1,11 +1,16 @@
 import { useState } from "react";
 
-import { randomAction, calculateWinner } from "./helpers";
 import { Player } from "./Player/Player";
 import { ActionButton } from "./ActionButton/ActionButton";
-import { ShowWinner } from "./ShowWinner/ShowWinner";
 
-import { MainContainer, StyledTitle, StyledDescription, ResultContainer, GameContainer } from "./RockPaperScissors.styled";
+import {
+  MainContainer,
+  StyledTitle,
+  StyledDescription,
+  ResultContainer,
+  TextStyled,
+  GameContainer,
+} from "./RockPaperScissors.styled";
 
 export const RockPaperScissors = () => {
   const [gameState, setGameState] = useState({
@@ -15,6 +20,43 @@ export const RockPaperScissors = () => {
     computerScore: 0,
     winner: 0,
   });
+
+  const { playerScore, playerAction, computerScore, computerAction, winner } =
+    gameState;
+
+  const actions = {
+    rock: "rock",
+    paper: "paper",
+    scissors: "scissors",
+  };
+
+  const resultText = {
+    "-1": "Цього разу перемога за вами",
+    0: "Я не програв - ви не виграли",
+    1: "Повстання машин скоро :D",
+  };
+
+  const winnerText = resultText[winner] || "Unknown Winner";
+
+  const randomAction = () => {
+    const keys = Object.keys(actions);
+    const index = Math.floor(Math.random() * keys.length);
+    return keys[index];
+  };
+
+  const calculateWinner = (action1, action2) => {
+    if (action1 === action2) {
+      return 0; // Tie
+    } else if (
+      (action1 === "rock" && action2 === "scissors") ||
+      (action1 === "paper" && action2 === "rock") ||
+      (action1 === "scissors" && action2 === "paper")
+    ) {
+      return -1; // Player wins
+    } else {
+      return 1; // Computer wins
+    }
+  };
 
   const onActionSelected = (selectedAction) => {
     const newComputerAction = randomAction();
@@ -39,26 +81,19 @@ export const RockPaperScissors = () => {
     });
   };
 
-  const { playerScore, playerAction, computerScore, computerAction, winner } =
-    gameState;
-
   return (
     <MainContainer>
       <StyledTitle>Камінь, ножиці, папір</StyledTitle>
-      <StyledDescription>*У цій грі вашим суперником буде комп'ютер</StyledDescription>
-      {/* <StyledDescription>Пам'ятайте, що ножиці ріжуть папір, камінь сильніший за ножиці, а папір може накрити камінь.</StyledDescription> */}
+      <StyledDescription>
+        *У цій грі вашим суперником буде комп'ютер
+      </StyledDescription>
+      <StyledDescription>Пам'ятайте, що ножиці ріжуть папір, камінь сильніший за ножиці, а папір може накрити камінь.</StyledDescription>
       <GameContainer>
         <div>
-          <p>Ваш хід: </p>
-          <ActionButton action="rock" onActionSelected={onActionSelected}>
-            {/* <img width="50px" src={iconRock} alt="" /> */}
-          </ActionButton>
-          <ActionButton action="paper" onActionSelected={onActionSelected}>
-            {/* <img width="50px" src={iconPaper} alt="" /> */}
-          </ActionButton>
-          <ActionButton action="scissors" onActionSelected={onActionSelected}>
-            {/* <img width="50px" src={iconScissors} alt="" /> */}
-          </ActionButton>
+          <TextStyled>Ваш хід: </TextStyled>
+          <ActionButton action="rock" onActionSelected={onActionSelected} />
+          <ActionButton action="paper" onActionSelected={onActionSelected} />
+          <ActionButton action="scissors" onActionSelected={onActionSelected} />
         </div>
         <ResultContainer>
           <Player name="Гравець" score={playerScore} action={playerAction} />
@@ -68,19 +103,8 @@ export const RockPaperScissors = () => {
             action={computerAction}
           />
         </ResultContainer>
-        <ShowWinner winner={winner} />
+        <TextStyled>{winnerText}</TextStyled>
       </GameContainer>
     </MainContainer>
   );
 };
-
-// import iconRock from "./iconRock.svg";
-// import iconPaper from "./iconPaper.svg";
-// import iconScissors from "./iconScissors.svg";
-
-// rock icon
-// <a href="https://www.freepik.com/free-vector/moai-easter-island-isolated-vector-cartoon-stone-sculpture_20366605.htm#fromView=search&page=1&position=2&uuid=c571e29d-3db9-40e3-a28d-b0f6c10f0190">Image by valadzionak_volha</a> on Freepik
-// paper icon
-// <a href="https://www.freepik.com/free-vector/blank-vintage-scroll-paper_21306053.htm#fromView=search&page=4&position=22&uuid=1c0fe69e-0326-4237-aec9-9e971d870408">Image by brgfx</a> on Freepik
-// scissors icon
-// <a href="https://www.freepik.com/free-vector/medical-scissors-tool-equipment-icon_70015447.htm#fromView=search&page=1&position=9&uuid=26fd0aa4-986a-4b24-80a8-55ecca79912c">Image by jemastock</a> on Freepik

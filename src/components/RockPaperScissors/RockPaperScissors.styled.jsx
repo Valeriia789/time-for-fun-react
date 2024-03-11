@@ -16,6 +16,8 @@ export const MainContainer = styled.div`
 `;
 
 export const StyledTitle = styled.h2`
+  padding: 12px;
+
   font-size: 24px;
   font-weight: 600;
 
@@ -23,8 +25,10 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledDescription = styled.p`
+  width: 300px;
+  align-self: center;
+
   font-size: 16px;
-  padding-bottom: 18px;
   color: rgb(200, 200, 60);
 `;
 
@@ -36,10 +40,17 @@ export const ResultContainer = styled.div`
   padding: 24px;
 `;
 
+export const TextStyled = styled.p`
+  padding: 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: rgb(170, 200, 85);
+`;
 export const GameContainer = styled.div`
   /* display: flex;
   flex-direction: row;
   justify-content: center;
   vertical-align: center; */
 `;
-
