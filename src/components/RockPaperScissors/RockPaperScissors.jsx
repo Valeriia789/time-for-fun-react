@@ -85,7 +85,7 @@ export const RockPaperScissors = () => {
     <MainContainer>
       <StyledTitle>Камінь, ножиці, папір</StyledTitle>
       <StyledDescription>
-        *У цій грі вашим суперником буде комп'ютер
+        *У цій грі вашим суперником буде комп'ютер.
       </StyledDescription>
       <StyledDescription>Пам'ятайте, що ножиці ріжуть папір, камінь сильніший за ножиці, а папір може накрити камінь.</StyledDescription>
       <GameContainer>

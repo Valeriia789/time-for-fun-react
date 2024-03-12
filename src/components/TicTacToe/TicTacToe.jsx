@@ -1,27 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import { Board } from "./Board/Board";
+
 import {
   TicTacToeContainer,
-  Row,
-  SquareBtn,
   StyledTitle,
   StyledDescription,
   StyledScore,
   StyledButton,
 } from "./TicTacToe.styled";
 
-function Square({ value, onClick }) {
-  return <SquareBtn onClick={onClick}>{value}</SquareBtn>;
-}
-
 export const TicTacToe = () => {
-  const [squares, setSquares] = useState(Array(9).fill(""));
+  const initialBoard = Array(9).fill("");
+
+  const [board, setBoard] = useState(initialBoard);
   const [isXTurn, setIsXTurn] = useState(true);
   const [status, setStatus] = useState("");
 
-  const getWinner = (squares) => {
-    // 0-1-2 a-b-c
-    // 3-4-5
-    // 6-7-8
+  // Input: squares - an array representing the current state of the game board
+  // Output: The symbol ('X' or 'O') of the winner if there is one, otherwise null
+  const getWinner = useMemo(() => {
+    // Winning combinations 0-1-2 a-b-c
     const winningCombinations = [
       [0, 1, 2],
       [3, 4, 5],
@@ -33,69 +31,74 @@ export const TicTacToe = () => {
       [2, 4, 6],
     ];
 
-    for (let i = 0; i < winningCombinations.length; i++) {
-      const [x, y, z] = winningCombinations[i];
+    // Iterate through each winning combination to check for a winner
+    return (squares) => {
+      for (let i = 0; i < winningCombinations.length; i++) {
+        const [a, b, c] = winningCombinations[i];
 
-      if (
-        squares[x] &&
-        squares[x] === squares[y] &&
-        squares[x] === squares[z]
-      ) {
-        return squares[x];
+        // Check if the squares in the winning combination are all the same symbol
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a]; // Return the winning symbol
+        }
       }
+
+      return null; // No winner found
+    };
+  }, []);
+
+  // Handle click on a square
+  const handleClick = (index) => {
+    try {
+      // Check if the index is within the valid range
+      if (index < 0 || index >= board.length) {
+        throw new Error(`Invalid index: ${index}`);
+      }
+
+      // Check if the game has already been won or the square is already occupied
+      if (getWinner(board) || board[index]) {
+        throw new Error(`Invalid move: ${index}`);
+      }
+
+      // Update the board state and player turn
+      setBoard((prevBoard) => {
+        const newBoard = [...prevBoard];
+        newBoard[index] = isXTurn ? "X" : "O";
+        return newBoard;
+      });
+      setIsXTurn(!isXTurn);
+    } catch (error) {
+      // Handle the error
+      console.error("An error occurred:", error.message);
     }
-
-    return null;
-  };
-
-  const handleClick = (getCurrentSquare) => {
-    let copySquares = [...squares];
-
-    if (getWinner(copySquares) || copySquares[getCurrentSquare]) return;
-    copySquares[getCurrentSquare] = isXTurn ? "X" : "O";
-
-    setIsXTurn(!isXTurn);
-    setSquares(copySquares);
   };
 
   const handleRestart = () => {
+    setBoard(initialBoard);
     setIsXTurn(true);
-    setSquares(Array(9).fill(""));
   };
 
   useEffect(() => {
-    // if there is no winner and every square is full
-    if (!getWinner(squares) && squares.every((item) => item !== "")) {
-      setStatus(`Нічия! Почніть нову гру.`);
-    } else if (getWinner(squares)) {
-      setStatus(`Переміг гравець: ${getWinner(squares)}`);
+    const winner = getWinner(board);
+    if (winner) {
+      setStatus(`Гравець "${winner}" переміг!`);
+    } else if (board.every((item) => item !== "")) {
+      setStatus("Нічия! Почніть нову гру.");
     } else {
       setStatus(`Зараз ходить гравець: ${isXTurn ? "X" : "O"}`);
     }
-  }, [squares, isXTurn]);
+  }, [board, isXTurn, getWinner]);
 
   return (
     <TicTacToeContainer>
       <StyledTitle>Хрестики-нулики</StyledTitle>
-      <StyledDescription>*На цій дошці мають грати два гравці </StyledDescription>
-      <Row>
-        <Square value={squares[0]} onClick={() => handleClick(0)} />
-        <Square value={squares[1]} onClick={() => handleClick(1)} />
-        <Square value={squares[2]} onClick={() => handleClick(2)} />
-      </Row>
-
-      <Row>
-        <Square value={squares[3]} onClick={() => handleClick(3)} />
-        <Square value={squares[4]} onClick={() => handleClick(4)} />
-        <Square value={squares[5]} onClick={() => handleClick(5)} />
-      </Row>
-
-      <Row>
-        <Square value={squares[6]} onClick={() => handleClick(6)} />
-        <Square value={squares[7]} onClick={() => handleClick(7)} />
-        <Square value={squares[8]} onClick={() => handleClick(8)} />
-      </Row>
-
+      <StyledDescription>
+        *На цій дошці мають грати два гравці.
+      </StyledDescription>
+      <Board board={board} handleClick={handleClick} />
       <StyledScore>{status}</StyledScore>
       <StyledButton onClick={handleRestart}>Нова гра</StyledButton>
     </TicTacToeContainer>
