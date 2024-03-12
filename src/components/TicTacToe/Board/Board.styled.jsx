@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const BoardContainer = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 12px;
+  /* transition: transform 3s ease-in-out; */
+`;
+
 export const Row = styled.div`
   display: flex;
   flex-wrap: nowrap;

@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { Board } from "./Board/Board";
 
 import {
@@ -6,6 +6,7 @@ import {
   StyledTitle,
   StyledDescription,
   StyledScore,
+  SwitcherButton,
   StyledButton,
 } from "./TicTacToe.styled";
 
@@ -15,6 +16,8 @@ export const TicTacToe = () => {
   const [board, setBoard] = useState(initialBoard);
   const [isXTurn, setIsXTurn] = useState(true);
   const [status, setStatus] = useState("");
+  const [isAgainstComputer, setIsAgainstComputer] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Input: squares - an array representing the current state of the game board
   // Output: The symbol ('X' or 'O') of the winner if there is one, otherwise null
@@ -51,55 +54,92 @@ export const TicTacToe = () => {
   }, []);
 
   // Handle click on a square
-  const handleClick = (index) => {
-    try {
-      // Check if the index is within the valid range
-      if (index < 0 || index >= board.length) {
-        throw new Error(`Invalid index: ${index}`);
-      }
+  const handleClick = useCallback(
+    (index) => {
+      try {
+        // Check if the index is within the valid range
+        if (index < 0 || index >= board.length) {
+          throw new Error(`Invalid index: ${index}`);
+        }
 
-      // Check if the game has already been won or the square is already occupied
-      if (getWinner(board) || board[index]) {
-        throw new Error(`Invalid move: ${index}`);
-      }
+        // Check if the game has already been won or the square is already occupied
+        if (getWinner(board) || board[index]) {
+          throw new Error(`Invalid move: ${index}`);
+        }
 
-      // Update the board state and player turn
-      setBoard((prevBoard) => {
-        const newBoard = [...prevBoard];
-        newBoard[index] = isXTurn ? "X" : "O";
-        return newBoard;
-      });
-      setIsXTurn(!isXTurn);
-    } catch (error) {
-      // Handle the error
-      console.error("An error occurred:", error.message);
-    }
-  };
+        // Update the board state and player turn
+        setBoard((prevBoard) => {
+          const newBoard = [...prevBoard];
+          newBoard[index] = isXTurn ? "X" : "O";
+          return newBoard;
+        });
+        setIsXTurn(!isXTurn);
+      } catch (error) {
+        // Handle the error
+        setErrorMessage(error.message);
+        console.error("An error occurred:", error.message);
+      }
+    },
+    [board, isXTurn, getWinner]
+  );
 
   const handleRestart = () => {
     setBoard(initialBoard);
     setIsXTurn(true);
   };
 
+  // Switcher
+  const handleSwitchMode = () => {
+    setIsAgainstComputer((prev) => !prev);
+    setBoard(initialBoard);
+    setIsXTurn(true);
+    setStatus("");
+    setErrorMessage("");
+  };
+
+  const makeComputerMove = useCallback(() => {
+    const emptyIndexes = board.reduce(
+      (indexes, value, index) => (value === "" ? [...indexes, index] : indexes),
+      []
+    );
+    const randomIndex =
+      emptyIndexes[Math.floor(Math.random() * emptyIndexes.length)];
+
+    setTimeout(() => handleClick(randomIndex), 500);
+  }, [board, handleClick]);
+
   useEffect(() => {
     const winner = getWinner(board);
     if (winner) {
-      setStatus(`Гравець "${winner}" переміг!`);
+      setStatus(`"${winner}" переміг!`);
     } else if (board.every((item) => item !== "")) {
       setStatus("Нічия! Почніть нову гру.");
     } else {
-      setStatus(`Зараз ходить гравець: ${isXTurn ? "X" : "O"}`);
+      if (isAgainstComputer && !isXTurn) {
+        makeComputerMove();
+      }
+      setStatus(`Зараз хід: ${isXTurn ? "X" : "O"}`);
     }
-  }, [board, isXTurn, getWinner]);
+  }, [board, isXTurn, getWinner, isAgainstComputer, makeComputerMove]);
 
   return (
     <TicTacToeContainer>
       <StyledTitle>Хрестики-нулики</StyledTitle>
+
       <StyledDescription>
-        *На цій дошці мають грати два гравці.
+        *Ви можете виграти, поставивши три однакових знаки ("Х" або "О") в
+        горизонтальному, вертикальному чи діагональному ряду.
       </StyledDescription>
-      <Board board={board} handleClick={handleClick} />
+      <SwitcherButton onClick={handleSwitchMode}>
+        {isAgainstComputer ? "Грати з другом" : "Грати з комп'ютером"}
+      </SwitcherButton>
       <StyledScore>{status}</StyledScore>
+      <Board
+        board={board}
+        handleClick={handleClick}
+        isXTurn={isXTurn}
+        isAgainstComputer={isAgainstComputer}
+      />
       <StyledButton onClick={handleRestart}>Нова гра</StyledButton>
     </TicTacToeContainer>
   );

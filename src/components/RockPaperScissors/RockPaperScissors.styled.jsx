@@ -38,7 +38,6 @@ export const ResultContainer = styled.div`
   align-items: center;
 
   padding: 24px;
-  bacground-color: red; 
 `;
 
 export const TextStyled = styled.p`
