@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/time-for-fun-react/static/css/main.813c0e81.css",
-    "main.js": "/time-for-fun-react/static/js/main.ac18166c.js",
-    "static/js/828.c6b73751.chunk.js": "/time-for-fun-react/static/js/828.c6b73751.chunk.js",
+    "main.js": "/time-for-fun-react/static/js/main.aa78798c.js",
+    "static/js/828.36abd9d1.chunk.js": "/time-for-fun-react/static/js/828.36abd9d1.chunk.js",
     "static/js/284.7e725239.chunk.js": "/time-for-fun-react/static/js/284.7e725239.chunk.js",
     "static/js/706.bdbcaec2.chunk.js": "/time-for-fun-react/static/js/706.bdbcaec2.chunk.js",
     "static/js/376.e32ed78b.chunk.js": "/time-for-fun-react/static/js/376.e32ed78b.chunk.js",
     "static/js/296.64440629.chunk.js": "/time-for-fun-react/static/js/296.64440629.chunk.js",
+    "static/js/774.1d8c0dde.chunk.js": "/time-for-fun-react/static/js/774.1d8c0dde.chunk.js",
     "static/js/344.02eb4928.chunk.js": "/time-for-fun-react/static/js/344.02eb4928.chunk.js",
     "static/js/315.2bfc4933.chunk.js": "/time-for-fun-react/static/js/315.2bfc4933.chunk.js",
     "static/media/imgBodyBg.jpg": "/time-for-fun-react/static/media/imgBodyBg.f12beb94b550552781ee.jpg",
@@ -21,17 +22,18 @@
     "static/media/iconRock.svg": "/time-for-fun-react/static/media/iconRock.3bab31c6feaef8864e87cb3cb6e59796.svg",
     "index.html": "/time-for-fun-react/index.html",
     "main.813c0e81.css.map": "/time-for-fun-react/static/css/main.813c0e81.css.map",
-    "main.ac18166c.js.map": "/time-for-fun-react/static/js/main.ac18166c.js.map",
-    "828.c6b73751.chunk.js.map": "/time-for-fun-react/static/js/828.c6b73751.chunk.js.map",
+    "main.aa78798c.js.map": "/time-for-fun-react/static/js/main.aa78798c.js.map",
+    "828.36abd9d1.chunk.js.map": "/time-for-fun-react/static/js/828.36abd9d1.chunk.js.map",
     "284.7e725239.chunk.js.map": "/time-for-fun-react/static/js/284.7e725239.chunk.js.map",
     "706.bdbcaec2.chunk.js.map": "/time-for-fun-react/static/js/706.bdbcaec2.chunk.js.map",
     "376.e32ed78b.chunk.js.map": "/time-for-fun-react/static/js/376.e32ed78b.chunk.js.map",
     "296.64440629.chunk.js.map": "/time-for-fun-react/static/js/296.64440629.chunk.js.map",
+    "774.1d8c0dde.chunk.js.map": "/time-for-fun-react/static/js/774.1d8c0dde.chunk.js.map",
     "344.02eb4928.chunk.js.map": "/time-for-fun-react/static/js/344.02eb4928.chunk.js.map",
     "315.2bfc4933.chunk.js.map": "/time-for-fun-react/static/js/315.2bfc4933.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.813c0e81.css",
-    "static/js/main.ac18166c.js"
+    "static/js/main.aa78798c.js"
   ]
 }

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktime_for_fun_react=self.webpackChunktime_for_fun_react||[]).push([[774],{774:(n,e,t)=>{t.r(e),t.d(e,{default:()=>d});var a=t(496);const c=()=>(0,a.jsx)(a.Fragment,{});var i,s=t(312);const r=t(360).cp.div(i||(i=(0,s.c)(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  padding: 12px;\n  \n  @media screen and (min-width: 576px) {\n    padding: 24px;\n  }\n\n"]))),d=()=>(0,a.jsx)(r,{children:(0,a.jsx)(c,{})})}}]);
+//# sourceMappingURL=774.1d8c0dde.chunk.js.map
