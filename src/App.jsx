@@ -8,6 +8,7 @@ const MagicBallPage = lazy(() => import("./pages/MagicBallPage/MagicBallPage"));
 const QuoteGeneratorPage = lazy(() => import("./pages/QuoteGeneratorPage/QuoteGeneratorPage"));
 const TicTacToePage = lazy(() => import("./pages/TicTacToePage/TicTacToePage"));
 const RockPaperScissorsPage = lazy(() => import("./pages/RockPaperScissorsPage/RockPaperScissorsPage"));
+const ReversePage = lazy(() => import("./pages/ReversePage/ReversePage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 export const App = () => {
@@ -19,6 +20,7 @@ export const App = () => {
         <Route path="quotes" element={<QuoteGeneratorPage />} />
         <Route path="tic-tac-toe" element={<TicTacToePage />} />
         <Route path="rock-paper-scissors" element={<RockPaperScissorsPage />} />
+        <Route path="reverse" element={<ReversePage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Route>

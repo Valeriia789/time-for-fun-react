@@ -26,12 +26,17 @@ const Home = () => {
 
       <NavLinkStyled to="/tic-tac-toe">
         <img width="200px" src={imgTicTacToe} alt="" />
-        <TitleStyled>Гра</TitleStyled>
+        <TitleStyled>Хрестики - нулики</TitleStyled>
       </NavLinkStyled>
 
       <NavLinkStyled to="/rock-paper-scissors">
         <img width="200px" src={imgRockPaperScissors} alt="" />
-        <TitleStyled>Гра</TitleStyled>
+        <TitleStyled>Камінь - ножиці - папір</TitleStyled>
+      </NavLinkStyled>
+
+      <NavLinkStyled to="/reverse">
+        <img width="200px" src={imgRockPaperScissors} alt="" />
+        <TitleStyled>Навпаки</TitleStyled>
       </NavLinkStyled>
     </NavContainer>
   );
